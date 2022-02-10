@@ -1,0 +1,426 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+}
+
+
+
+/***** General Styles *****/
+/* Color */
+:root {
+    --gray: #FBFBFB;
+    --blue_dark: #2E3D44;
+    --dark: #657A84;
+    --red: #DF040B;
+}
+.dark {
+    color: var(--blue_dark);
+}
+.red {
+    color: var(--red);
+}
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: var(--gray);
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {    
+    opacity: 0.8;
+}
+.center {
+    text-align: center;
+}
+.subtitle {
+    font-size: 2.5rem;
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+.subtitle span {
+    font-size: 1.1rem;
+    font-family: 'Merriweather Sans', sans-serif;
+    display: block;
+    margin-bottom: -5px;
+}
+.subtitle::after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid var(--red);
+    width: 150px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+/**************************/
+/* Header */
+
+.top_bar {
+    
+    padding: 0.5rem 2rem;
+    background-color: var(--blue_dark);    
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social_media a {
+    margin-right: 15px;
+}
+nav {
+    height: 50px;
+    padding: 0 2rem;
+    background-color: var(--red);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    
+}
+.menu {    
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li.logo {
+    align-self: flex-start;
+}
+li.logo a:hover {    
+    opacity: 1;
+}
+   
+li.logo img {
+    height: 5.5rem;
+}
+
+
+/* Hero */
+section.hero {    
+    display: flex;
+    justify-content: center;       
+    background: silver url(../img/tractor.jpg) no-repeat fixed 50% 50%;
+    background-size: cover;    
+    margin-bottom: -4px;
+}
+
+div.item_hero {       
+    width: 400px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.item_hero h2.subtitle {
+    margin-top: 10px;
+}
+.item_hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+div.item_hero:nth-child(1) {  
+    align-self: flex-end;
+} 
+div.item_hero:nth-child(2) {       
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.item_hero img {
+    width: 100%;
+}
+.bg_red {
+    background-color: var(--red);
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.bg_dark {
+    color: var(--gray);
+    background-color: var(--blue_dark);
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem; 
+}
+.tarjeton_hero {
+     display: flex;    
+}
+
+
+/* Tarjetón */
+section#tarjeton {
+    background-color: var(--red);  
+    padding: 1.5rem;
+}
+.wrapper_tarjeton {      
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+}
+
+div.tarjeton_item {    
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+div.tarjeton_item img {
+    width: 100%;
+}
+/*******************/
+
+/* Sobre Arturo */
+section#sobre_arturo {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: url(../img/COLOMBIA.png) no-repeat 50% 50%;
+    background-size: cover;
+    padding: 1rem;
+}
+section#sobre_arturo div {
+    text-align: center;
+    width: 95%;
+    
+}
+a.btn {
+    background-color: var(--red);
+    border-radius: 10px;
+    padding: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-top: 1rem;
+    align-self: flex-end;
+}
+
+/* Transformacion */
+section#transformacion {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: silver url(../img/agricultor.jpg) no-repeat fixed 50% 50%;
+    background-size: cover;
+    padding-bottom: 2rem;    
+}
+.wrapper_transformacion {
+    display: flex;
+    flex-flow: column;    
+    align-items: center;     
+}
+.transformacion_item {
+    display: flex;
+    flex-flow: column;
+}
+div.compromiso {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    width: 310px;
+}
+div.compromiso img {
+    width: 70px;
+}
+
+/* Objetivos */
+
+section.objetivos_un {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    align-items: center;    
+    padding: 3rem;
+    background-color: var(--blue_dark);
+}
+section.objetivos_un div.objetivos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1rem;
+}
+div.title_ojetivo img {
+    height: 30px;
+}
+div.objetivos a.item_objetivo img {
+    width: 100px;
+}
+
+/* Voluntarios */
+section#voluntario {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--dark); 
+    background: url(../img/manos.png) no-repeat center bottom; 
+    padding: 0px 5% 5% 5%;  
+}
+section#voluntario img.soy_liberal{
+    width: 35%;
+}
+
+form.form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 30px 0;
+}
+form.form input, form.form button {
+    border: 2px solid var(--blue_dark);
+    border-radius: 10px;
+    padding: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+form.form input::placeholder {
+    color: var(--dark);
+    font-size: 0.8rem;
+}
+form.form button {
+    border: none;
+    background-color: var(--red);
+    color: white;
+    font-weight: bold;
+}
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: var(--blue_dark);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* ---RESPONSIVE--- */
+@media (max-width: 48rem) {    
+    .menu li.item_menu:not(.logo) {    
+        display: none;
+    }
+    section.hero {        
+        flex-flow: column;   
+        align-items: center;
+        padding-top: 80px;
+        background: silver url(../img/tractor.jpg) no-repeat 50% 50%;
+
+    }
+    div.item_hero:nth-child(1) {
+    order: 2;
+}
+    div.item_hero:nth-child(2) {
+        order: 1;  
+    }
+    div.tarjeton_hero img {
+        width: 50%;
+    }
+    a.btn {
+        background-color: var(--red);
+        border-radius: 10px;
+        padding: 1rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        margin-top: 1rem;
+        align-self: center;
+        width: 70%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    section#transformacion {        
+        background: silver url(../img/agricultor.jpg) no-repeat 50% 50%;
+        background-size: cover;
+        
+    }
+    section#voluntario img.soy_liberal{
+        width: 90%;
+    }
+    form.form {
+        flex-flow: column;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 30px 0;
+    }
+
+}
+
+@media (max-width: 62rem) and (orientation: landscape) {    
+
+}
+
+@media (min-width: 62rem) {    
+    nav {
+        height: 50px;
+        padding: 0 2rem;
+        background-color: var(--red);
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .menu {    
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 5%;
+    }
+    li.logo {
+        align-self: flex-start;
+    }
+    li.logo a:hover {    
+        opacity: 1;
+    }
+       
+    li.logo img {
+        height: 5.5rem;
+    }
+    section.hero {
+        height: 80vh;
+        gap: 50px;      
+        
+    }
+    div.tarjeton_item {
+        height: 150px;
+        width: 250px;        
+    }
+    .wrapper_tarjeton {
+        border: 5px solid var(--gray);
+        height: 250px;       
+        gap: 20px;
+    }
+    section#sobre_arturo {        
+        background: url(../img/COLOMBIA.png) no-repeat 50% 50%;
+        background-size: contain;
+        padding: 3rem;
+    }
+    section#sobre_arturo div {
+        width: 70%;       
+    }
+    .wrapper_transformacion {        
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;     
+    }
+    div.title_ojetivo img {
+        height: 100px;
+    }
+    
+}
