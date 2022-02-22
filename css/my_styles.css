@@ -62,8 +62,7 @@ a:hover {
 /**************************/
 /* Header */
 
-.top_bar {
-    
+.top_bar {    
     padding: 0.5rem 2rem;
     background-color: var(--blue_dark);    
     font-weight: bold;
@@ -71,9 +70,10 @@ a:hover {
     justify-content: space-between;
     align-items: center;
 }
-.social_media a {
+.social_media a, .social_media span {
     margin-right: 15px;
 }
+
 nav {
     height: 50px;
     padding: 0 2rem;
@@ -156,7 +156,10 @@ div.item_hero img {
     font-size: 1.5rem; 
 }
 .tarjeton_hero {
-     display: flex;    
+     display: flex;      
+}
+div.tarjeton_hero img {
+    width: 50%;
 }
 
 
@@ -310,6 +313,9 @@ footer {
 
 /* ---RESPONSIVE--- */
 @media (max-width: 48rem) {    
+    .social_media span {
+        display: none;
+    }
     .menu li.item_menu:not(.logo) {    
         display: none;
     }
